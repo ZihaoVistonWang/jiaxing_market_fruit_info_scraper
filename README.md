@@ -1,38 +1,51 @@
 # Jiaxing Market Fruit Info Scraper
 
-This repository contains a web scraper designed to extract the average prices of domestic and imported fruits from the Jiaxing market. The scraper targets the website (<http://jxzgsgzs.com/price.html>), where it retrieves and processes the relevant pricing data.
+[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## Installation
+## Project Description
 
-1. Clone the repository:
+This repository contains a web scraper designed to extract the average prices of domestic and imported fruits from the Jiaxing market. The scraper targets the website [Jiaxing Fruit Market](http://jxzgsgzs.com/price.html) to retrieve and process relevant pricing data.
 
-   ```bash
-   git clone https://github.com/ZihaoVistonWang/jiaxing_market_fruit_info_scraper.git
-   ```
+## Key Features
 
-2. Navigate to the project directory:
-
-   ```bash
-   cd jiaxing_market_fruit_info_scraper
-   ```
-
-3. Install the required dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Scrapes both domestic and imported fruit data
+- Automatic pagination handling
+- Built-in request retry mechanism
+- Data saved in CSV format
+- Supports custom date range scraping
 
 ## Usage
 
-Run the scraper using the following command:
+1. Setup environment
 
-```bash
-python main.py
-```
+   ```bash
+   # Clone repository
+   git clone https://github.com/your_username/jiaxing_market_fruit_info_scraper.git
+   cd jiaxing_market_fruit_info_scraper
 
-## Output
+   # Install dependencies
+   pip install -r requirements.txt
+   ```
 
-The script will save the scraped fruit information data to `domestic_fruit_info.csv` with the following columns (if available):
+2. Run the scraper
+
+   ```python
+   # Default: scrapes data from 2018-01-01 to 2018-01-05
+   python main.py
+
+   # Specify end date
+   python main.py --date_end "2023-12-31"
+   ```
+
+## Data Output
+
+The scraper generates two CSV files:
+
+1. `domestic_fruit_info.csv` - Contains domestic fruit data
+2. `imported_fruit_info.csv` - Contains imported fruit data
+
+Both files have the same columns (if available):
 
 - id
 - stageId
