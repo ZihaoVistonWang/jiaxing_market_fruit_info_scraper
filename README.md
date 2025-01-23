@@ -1,6 +1,6 @@
 # Jiaxing Market Fruit Info Scraper
 
-This repository contains a web scraper designed to extract the average prices of domestic and imported fruits from the Jiaxing market. The scraper targets the website (http://jxzgsgzs.com/price.html), where it retrieves and processes the relevant pricing data.
+This repository contains a web scraper designed to extract the average prices of domestic and imported fruits from the Jiaxing market. The scraper targets the website (<http://jxzgsgzs.com/price.html>), where it retrieves and processes the relevant pricing data.
 
 ## Installation
 
@@ -30,7 +30,24 @@ Run the scraper using the following command:
 python main.py
 ```
 
-The script will output the scraped fruit price data to the console.
+## Output
+
+The script will save the scraped fruit information data to `domestic_fruit_info.csv` with the following columns (if available):
+
+- id
+- stageId
+- structId
+- price
+- totalSalesVolume
+- totalTurnover
+- category
+- kind
+- placeOfOrigin
+- city
+- specification
+- date
+
+If any errors occur during execution, please check the `log.log` file for detailed error messages.
 
 ## Dependencies
 
