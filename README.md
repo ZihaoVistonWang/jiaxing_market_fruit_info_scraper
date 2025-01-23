@@ -33,9 +33,6 @@ This repository contains a web scraper designed to extract the average prices of
    ```python
    # Default: scrapes data from 2018-01-01 to 2018-01-05
    python main.py
-
-   # Specify end date
-   python main.py --date_end "2023-12-31"
    ```
 
 ## Data Output
